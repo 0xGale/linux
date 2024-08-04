@@ -1234,6 +1234,8 @@ static int ep_insert(struct eventpoll *ep, struct epoll_event *event,
 	int error, revents, pwake = 0;
 	unsigned long flags;
 	long user_watches;
+
+	// 分配并初始化epitem, 分配一个epi对象
 	struct epitem *epi;
 	struct ep_pqueue epq;
 
